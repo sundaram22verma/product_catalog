@@ -109,6 +109,13 @@ public class DataSeeder implements CommandLineRunner {
         microwave.setPrice(119.99);
         microwave.setCategory(home);
 
-        productRepository.saveAll(Arrays.asList(phone, laptop, jacket, blender, headphones, smartwatch, tshirt, coffeeMaker, sneakers, microwave));
+        Product hhproduct = new Product();
+        hhproduct.setName("House Cleaning Products");
+        hhproduct.setDescription("Keeping your home clean and organized is essential for maintaining a healthy living environment.");
+        hhproduct.setImageUrl("https://maggymaid.com/wp-content/uploads/2019/06/How-Much-Should-I-Spend-on-House-Cleaning-Products-2048x1152.png");
+        hhproduct.setPrice(500.00);
+        hhproduct.setCategory(home);
+
+        productRepository.saveAll(Arrays.asList(phone, laptop, jacket, blender, headphones, smartwatch, tshirt, coffeeMaker, sneakers, microwave, hhproduct));
     }
 }

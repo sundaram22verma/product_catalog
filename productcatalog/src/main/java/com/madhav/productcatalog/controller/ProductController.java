@@ -25,4 +25,10 @@ public class ProductController {
     public List<Product> getAllProductsByCategory(@PathVariable Long categoryId) {
         return productService.getProductByCategory(categoryId);
     }
+
+    // Endpoint to create a new product
+    @PostMapping
+    public Product createProduct(@RequestBody Product product) {
+        return productService.createProduct(product);
+    }
 }
